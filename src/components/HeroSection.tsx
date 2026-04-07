@@ -6,7 +6,6 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden gradient-mesh">
-      {/* Subtle grid overlay */}
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
@@ -16,11 +15,12 @@ const HeroSection = () => {
       />
 
       <div ref={ref} className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-20">
-        <p className="reveal text-sm font-medium tracking-widest uppercase text-muted-foreground mb-6">
+        <p className="reveal flex items-center justify-center gap-2 text-sm font-medium tracking-widest uppercase text-muted-foreground mb-8">
+          <span className="w-2 h-2 rounded-full bg-green-500 inline-block" />
           Built for teams that want results, not experiments
         </p>
 
-        <h1 className="reveal reveal-delay-1 text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-6">
+        <h1 className="reveal reveal-delay-1 text-5xl sm:text-6xl md:text-8xl font-bold tracking-tight leading-[1.05] mb-8">
           <span className="text-gradient">AI that actually works</span>
           <br />
           <span className="text-gradient">for your business</span>
@@ -45,14 +45,20 @@ const HeroSection = () => {
           </Button>
         </div>
 
-        <div className="reveal reveal-delay-4 mt-16 flex flex-wrap items-center justify-center gap-3 text-xs text-muted-foreground">
-          <span className="px-3 py-1.5 rounded-full border border-border bg-secondary/50">MSME Registered</span>
-          <span className="px-3 py-1.5 rounded-full border border-border bg-secondary/50">Government Recognized</span>
-          <span className="px-3 py-1.5 rounded-full border border-border bg-secondary/50">UDYAM-AP-12-0115093</span>
+        <div className="reveal reveal-delay-4 mt-20">
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-muted-foreground mb-4">
+            Trust & Credentials
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-2 text-sm text-muted-foreground">
+            <span>MSME Registered</span>
+            <span className="text-border">•</span>
+            <span>Government Recognized</span>
+            <span className="text-border">•</span>
+            <span>UDYAM-AP-12-0115093</span>
+          </div>
         </div>
       </div>
 
-      {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
