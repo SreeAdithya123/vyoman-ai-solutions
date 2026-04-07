@@ -33,12 +33,12 @@ const HeroSection = () => {
       />
 
       <div ref={ref} className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-20">
-        <p className="reveal flex items-center justify-center gap-2 text-sm font-medium tracking-widest uppercase text-muted-foreground mb-8">
+        <p className="reveal flex items-center justify-center gap-2.5 text-[13px] font-medium tracking-wide text-muted-foreground mb-10">
           <span className="w-2 h-2 rounded-full bg-green-500 inline-block" />
-          Built for teams that want results, not experiments
+          <span className="px-4 py-1.5 rounded-full border border-border">Built for teams that want results, not experiments</span>
         </p>
 
-        <h1 className="reveal reveal-delay-1 text-5xl sm:text-6xl md:text-8xl font-bold tracking-tight leading-[1.05] mb-8">
+        <h1 className="reveal reveal-delay-1 text-[clamp(3rem,8vw,7rem)] font-extrabold tracking-[-0.04em] leading-[0.95] mb-8">
           <span className="hero-glow-text">AI that actually works</span>
           <br />
           <span className="hero-glow-text-muted">for your business</span>
