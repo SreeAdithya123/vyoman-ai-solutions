@@ -46,7 +46,7 @@ const HeroSection = () => {
 
         <p className="reveal reveal-delay-2 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-4 leading-relaxed">
           Most AI looks good in demos.
-          We build AI that performs in real operations — with your data, your workflows, and your goals.
+          We build AI that performs in real operations with your data, your workflows, and your goals.
         </p>
 
         <div className="reveal reveal-delay-3 flex flex-col sm:flex-row gap-4 justify-center mt-10">
