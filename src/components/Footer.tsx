@@ -3,7 +3,7 @@ const Footer = () => {
     <footer className="py-12 px-6 border-t border-border">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-2.5">
-          <div className="w-7 h-7 rounded-md bg-primary flex items-center justify-center text-sm font-bold text-primary-foreground">
+          <div className="w-7 h-7 rounded-md bg-foreground flex items-center justify-center text-sm font-bold text-background">
             V
           </div>
           <span className="text-base font-semibold text-foreground">Vyoman AI Solutions</span>
