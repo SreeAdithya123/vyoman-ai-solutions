@@ -1,50 +1,86 @@
 
 
-## Vyoman AI Solutions — Linear-Style Landing Page
+## Redesign to Match Reference Screenshots
 
-### Design Direction
-Dark theme inspired by Linear.app with smooth scroll animations, gradient mesh backgrounds, and polished hover effects. Purple/blue accent colors on a near-black background.
+The uploaded images show a refined version of the current site with several layout and style differences. Here is what needs to change:
 
-### Page Structure
+### 1. Navbar Update (`Navbar.tsx`)
+- Add a purple "V" square logo icon before "Vyoman AI Solutions"
+- Change nav links to: Product, Use Cases, Services, Why Us
+- Add "Log in" text link before the "Contact Us" button
+- "Contact Us" button gets a bordered/outline style
 
-1. **Navbar** — Sticky top bar with Vyoman logo, nav links (Solutions, Services, About), and "Talk to us" CTA button
+### 2. Hero Section Update (`HeroSection.tsx`)
+- Green dot before the tagline "Built for teams that want results, not experiments"
+- Larger, bolder typography for headline
+- Add "TRUST & CREDENTIALS" label above trust badges
+- Trust badges displayed inline with dot separators instead of pill badges
 
-2. **Hero Section** — Full-viewport dark section with gradient mesh background, large headline "AI that actually works for your business", subheadline, trust badges (MSME/UDYAM), and two CTA buttons
+### 3. Product Pitch Update (`ProductPitch.tsx`)
+- Left-aligned headline, second line in gradient/muted color
+- Body text as a flowing paragraph (not bullet points)
+- Remove the benefit grid cards entirely -- integrate benefits into the paragraph text
 
-3. **Social Proof Strip** — Subtle animated text strip
+### 4. Feature Blocks Update (`FeatureBlocks.tsx`)
+- Keep 2x2 grid but make cards more spacious
+- Icon displayed in a subtle circular/rounded container at top
+- More padding, cleaner look
 
-4. **Product Pitch** — "From idea to working AI" section with 4 benefit points, clean grid layout
+### 5. Use Cases + Services Combined Layout
+- Display Use Cases and Services side-by-side in two columns
+- Use Cases on left with ">" chevron arrows
+- Services on right with bullet dots
+- Remove separate section backgrounds, merge into one section
 
-5. **Feature Blocks (x4)** — Card grid with icon/title/description, hover glow effects (Built for real workflows, Works with your data, Scales as you grow, Delivered end to end)
+### 6. Differentiation Update (`Differentiation.tsx`)
+- Center-aligned headline and body text
+- Remove red X icons, remove destructive styling
+- 4 cards in a single horizontal row with centered text
+- Clean bordered cards without color tints
 
-6. **Use Cases Section** — "AI applied where it actually matters" with 5 use cases in a staggered list/card layout
+### 7. Why Vyoman Update (`WhyVyoman.tsx`)
+- Centered headline, white text (not gradient)
+- Numbered items (01-05) instead of icons
+- 3-column top row + 2-column bottom row layout
+- No card borders, just text with numbers
+- Subtle background section
 
-7. **Services Section** — 5 services displayed in a clean grid
+### 8. Philosophy Update (`Philosophy.tsx`)
+- Add periods: "AI is not the goal." / "Better business outcomes are."
+- Second line in muted gradient color
 
-8. **Differentiation Section** — "Most AI projects fail" messaging with 4 points
+### 9. Tagline Strip Update (`TaglineStrip.tsx`)
+- White/light background with dark text instead of dark section
+- Bold centered text
 
-9. **Why Vyoman** — 5 reasons in a feature grid with icons
+### 10. CTA + Contact Combined (`CTASection.tsx` + `ContactSection.tsx`)
+- Merge into one section with side-by-side layout
+- Left side: CTA headline, subheadline, two buttons ("Talk to us" with arrow, "Get started")
+- Right side: Contact info card with company details, email, phone (using @ and # icons)
+- Remove the form entirely (visual-only contact card)
+- Phone number updated to "+91 89859 88999" per screenshot
 
-10. **Philosophy Section** — Centered text block with impactful typography
+### 11. Footer Update (`Footer.tsx`)
+- Add purple "V" logo icon matching navbar
+- "Wisdom Engineered with AI" in accent color on right
+- "Built in India..." line below on right
 
-11. **Tagline Strip** — Full-width accent banner
+### 12. Remove `SocialProofStrip.tsx`
+- The marquee strip is not shown in the reference images; remove it from Index.tsx
 
-12. **CTA Section** — Final conversion section with two buttons
-
-13. **Contact Section** — Contact details and visual-only form
-
-14. **Footer** — Company info, tagline, "Built in India" line
-
-### Animations & Effects
-- Scroll-triggered fade-in/slide-up animations on all sections
-- Gradient mesh/aurora background on hero
-- Hover glow effects on feature cards
-- Smooth transitions on buttons and links
-- Intersection Observer for reveal-on-scroll
-
-### Technical Approach
-- All content in modular React components
-- Dark theme via CSS variables
-- Framer Motion or CSS-based scroll animations
-- Fully responsive (mobile-first)
+### Files to modify
+- `src/components/Navbar.tsx`
+- `src/components/HeroSection.tsx`
+- `src/components/ProductPitch.tsx`
+- `src/components/FeatureBlocks.tsx`
+- `src/components/UseCases.tsx` -- merge with Services into combined section
+- `src/components/Services.tsx` -- remove, merge into UseCases
+- `src/components/Differentiation.tsx`
+- `src/components/WhyVyoman.tsx`
+- `src/components/Philosophy.tsx`
+- `src/components/TaglineStrip.tsx`
+- `src/components/CTASection.tsx` -- merge with Contact
+- `src/components/ContactSection.tsx` -- remove, merge into CTA
+- `src/components/Footer.tsx`
+- `src/pages/Index.tsx` -- remove SocialProofStrip, Services, ContactSection imports
 
