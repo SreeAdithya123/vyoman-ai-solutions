@@ -12,10 +12,10 @@ const Navbar = () => {
   }, []);
 
   const links = [
-    { label: "Solutions", href: "#use-cases" },
-    { label: "Services", href: "#services" },
-    { label: "Why Vyoman", href: "#why-vyoman" },
-    { label: "Contact", href: "#contact" },
+    { label: "Product", href: "#product" },
+    { label: "Use Cases", href: "#use-cases" },
+    { label: "Services", href: "#use-cases" },
+    { label: "Why Us", href: "#why-vyoman" },
   ];
 
   return (
@@ -27,8 +27,11 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="text-lg font-bold tracking-tight text-foreground">
-          Vyoman<span className="text-gradient-accent"> AI</span>
+        <a href="#" className="flex items-center gap-2.5 text-foreground">
+          <div className="w-7 h-7 rounded-md bg-primary flex items-center justify-center text-sm font-bold text-primary-foreground">
+            V
+          </div>
+          <span className="text-base font-semibold tracking-tight">Vyoman AI Solutions</span>
         </a>
 
         {/* Desktop links */}
@@ -42,8 +45,11 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <Button size="sm" className="rounded-full px-5" asChild>
-            <a href="#contact">Talk to us</a>
+          <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
+            Log in
+          </a>
+          <Button size="sm" variant="outline" className="rounded-full px-5 border-border" asChild>
+            <a href="#contact">Contact Us</a>
           </Button>
         </div>
 
@@ -72,8 +78,9 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <Button size="sm" className="rounded-full px-5 mt-3 w-full" asChild>
-            <a href="#contact" onClick={() => setMobileOpen(false)}>Talk to us</a>
+          <a href="#contact" className="block py-3 text-sm text-muted-foreground hover:text-foreground" onClick={() => setMobileOpen(false)}>Log in</a>
+          <Button size="sm" variant="outline" className="rounded-full px-5 mt-3 w-full border-border" asChild>
+            <a href="#contact" onClick={() => setMobileOpen(false)}>Contact Us</a>
           </Button>
         </div>
       )}

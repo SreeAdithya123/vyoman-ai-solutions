@@ -28,15 +28,17 @@ const FeatureBlocks = () => {
   const ref = useScrollReveal();
 
   return (
-    <section className="py-24 md:py-32 px-6 bg-secondary/20">
+    <section className="py-24 md:py-32 px-6">
       <div ref={ref} className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-8">
           {features.map((f, i) => (
             <div
               key={i}
-              className={`reveal reveal-delay-${i + 1} p-8 rounded-xl border border-border bg-card glow-card`}
+              className={`reveal reveal-delay-${i + 1} p-10 rounded-xl border border-border bg-card glow-card`}
             >
-              <f.icon className="w-8 h-8 text-primary mb-4" />
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                <f.icon className="w-6 h-6 text-primary" />
+              </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">{f.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{f.desc}</p>
             </div>
