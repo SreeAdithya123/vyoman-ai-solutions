@@ -38,8 +38,8 @@ const HeroSection = () => {
           <span className="px-4 py-1.5 rounded-full border border-border">Built for teams that want results, not experiments</span>
         </p>
 
-        <h1 className="reveal reveal-delay-1 text-[clamp(3rem,8vw,7rem)] font-extrabold tracking-[-0.04em] leading-[0.95] mb-8">
-          <span className="hero-glow-text">AI that actually works</span>
+        <h1 className="reveal reveal-delay-1 text-[clamp(2.5rem,6.5vw,5.5rem)] font-extrabold tracking-[-0.04em] leading-[0.95] mb-8">
+          <span className="hero-glow-text whitespace-nowrap">AI that actually works</span>
           <br />
           <span className="hero-glow-text-muted">for your business</span>
         </h1>
