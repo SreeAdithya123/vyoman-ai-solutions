@@ -28,7 +28,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2.5 text-foreground">
-          <div className="w-7 h-7 rounded-md bg-primary flex items-center justify-center text-sm font-bold text-primary-foreground">
+          <div className="w-7 h-7 rounded-md bg-foreground flex items-center justify-center text-sm font-bold text-background">
             V
           </div>
           <span className="text-base font-semibold tracking-tight">Vyoman AI Solutions</span>

@@ -16,7 +16,7 @@ const HeroSection = () => {
 
       <div ref={ref} className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-20">
         <p className="reveal flex items-center justify-center gap-2 text-sm font-medium tracking-widest uppercase text-muted-foreground mb-8">
-          <span className="w-2 h-2 rounded-full bg-green-500 inline-block" />
+          <span className="w-2 h-2 rounded-full bg-foreground inline-block" />
           Built for teams that want results, not experiments
         </p>
 
