@@ -112,4 +112,14 @@
     border-color: hsl(0 0% 30%);
     transform: translateY(-2px);
   }
+
+  .hero-glow-text {
+    color: hsl(0 0% 95%);
+    text-shadow: 0 0 60px hsl(0 0% 100% / 0.25), 0 0 120px hsl(0 0% 100% / 0.1);
+  }
+
+  .hero-glow-text-muted {
+    color: hsl(0 0% 45%);
+    text-shadow: 0 0 40px hsl(0 0% 100% / 0.08), 0 0 80px hsl(0 0% 100% / 0.04);
+  }
 }

@@ -1,29 +1,47 @@
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   const ref = useScrollReveal();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden gradient-mesh">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+      {/* Radial glow behind text */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: `linear-gradient(hsl(0 0% 100%) 1px, transparent 1px), linear-gradient(90deg, hsl(0 0% 100%) 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
+          background: `
+            radial-gradient(ellipse 60% 40% at 50% 45%, hsl(0 0% 20% / 0.5), transparent 70%),
+            radial-gradient(ellipse 80% 50% at 50% 50%, hsl(0 0% 12% / 0.4), transparent 80%)
+          `,
+        }}
+      />
+
+      {/* Grid overlay — fading from center outward */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: `
+            linear-gradient(hsl(0 0% 100% / 0.06) 1px, transparent 1px),
+            linear-gradient(90deg, hsl(0 0% 100% / 0.06) 1px, transparent 1px)
+          `,
+          backgroundSize: "80px 80px",
+          maskImage: `radial-gradient(ellipse 70% 60% at 50% 50%, black 20%, transparent 70%)`,
+          WebkitMaskImage: `radial-gradient(ellipse 70% 60% at 50% 50%, black 20%, transparent 70%)`,
         }}
       />
 
       <div ref={ref} className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-20">
         <p className="reveal flex items-center justify-center gap-2 text-sm font-medium tracking-widest uppercase text-muted-foreground mb-8">
-          <span className="w-2 h-2 rounded-full bg-foreground inline-block" />
+          <span className="w-2 h-2 rounded-full bg-green-500 inline-block" />
           Built for teams that want results, not experiments
         </p>
 
         <h1 className="reveal reveal-delay-1 text-5xl sm:text-6xl md:text-8xl font-bold tracking-tight leading-[1.05] mb-8">
-          <span className="text-gradient">AI that actually works</span>
+          <span className="hero-glow-text">AI that actually works</span>
           <br />
-          <span className="text-gradient">for your business</span>
+          <span className="hero-glow-text-muted">for your business</span>
         </h1>
 
         <p className="reveal reveal-delay-2 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-4 leading-relaxed">
@@ -32,8 +50,8 @@ const HeroSection = () => {
         </p>
 
         <div className="reveal reveal-delay-3 flex flex-col sm:flex-row gap-4 justify-center mt-10">
-          <Button size="lg" className="rounded-full px-8 text-base" asChild>
-            <a href="#contact">Start a conversation</a>
+          <Button size="lg" className="rounded-full px-8 text-base gap-2" asChild>
+            <a href="#contact">Start a conversation <ArrowRight className="w-4 h-4" /></a>
           </Button>
           <Button
             size="lg"
