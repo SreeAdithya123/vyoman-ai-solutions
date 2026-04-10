@@ -48,19 +48,11 @@ const TeamSection = () => {
           </p>
         </div>
 
-        {/* Leadership */}
+        {/* Leadership & Core Team */}
         <div className="mb-8">
-          <p className="reveal text-xs uppercase tracking-widest text-muted-foreground mb-4 text-center">Leadership</p>
-          <div className="max-w-sm mx-auto">
-            {leadership.map((m) => <MemberCard key={m.name} member={m} large />)}
-          </div>
-        </div>
-
-        {/* Core Team */}
-        <div className="mb-8">
-          <p className="reveal text-xs uppercase tracking-widest text-muted-foreground mb-4 text-center">Core Team</p>
-          <div className="max-w-sm mx-auto">
-            {coreTeam.map((m) => <MemberCard key={m.name} member={m} />)}
+          <p className="reveal text-xs uppercase tracking-widest text-muted-foreground mb-4 text-center">Leadership & Core Team</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+            {[...leadership, ...coreTeam].map((m) => <MemberCard key={m.name} member={m} />)}
           </div>
         </div>
 
