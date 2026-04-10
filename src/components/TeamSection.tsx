@@ -29,8 +29,8 @@ const researchTeam: TeamMember[] = [
 ];
 
 const MemberCard = ({ member }: { member: TeamMember }) => (
-  <div className="reveal flex flex-col items-center text-center border border-border rounded-2xl bg-card p-6 md:p-8">
-    <Avatar className="h-28 w-28 mb-4 md:h-32 md:w-32">
+  <div className="reveal flex flex-col items-center text-center border border-border rounded-2xl bg-card p-8 md:p-10">
+    <Avatar className="h-32 w-32 mb-5 md:h-40 md:w-40">
       <AvatarImage src={member.image} alt={member.name} className="h-full w-full object-cover object-center" />
       <AvatarFallback className="bg-foreground text-background font-bold text-lg">
         {member.initials}
