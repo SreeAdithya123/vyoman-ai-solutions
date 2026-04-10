@@ -1,42 +1,30 @@
 
 
-## Mobile Responsiveness Fix
+## Add "Our Team" Section
 
-### Issues Found
-1. **Hero headline overflow** — `whitespace-nowrap` on "AI that actually works" causes text to clip/overflow on mobile (375px). The text extends beyond the screen edge.
-2. **Hero description text clipping** — paragraph text gets cut off on the right side.
-3. **Differentiation grid** — `grid-cols-2` on small screens makes the "No..." cards too narrow and cramped.
-4. **General spacing** — some sections have excessive padding on mobile.
+### Overview
+Add a new Team section to the landing page showcasing leadership and core team members, placed between the Philosophy and TaglineStrip sections.
 
-### Changes
+### New File: `src/components/TeamSection.tsx`
+Create a team section with three tiers matching the site's black-and-white theme:
 
-**1. HeroSection.tsx — Fix headline overflow on mobile**
-- Remove `whitespace-nowrap` from the headline span
-- Use responsive font sizing: `text-[clamp(2rem,8vw,5.5rem)]` so on 375px screens it shrinks enough to fit on one line naturally
-- Add `md:whitespace-nowrap` so it still stays on one line on desktop
-- Reduce mobile padding: change `pt-20` to `pt-16`
+- **Section header**: "Our Team" with subtitle about the team's mission
+- **Leadership card** (larger, prominent):
+  - K. Sree Adithya — Founder & CEO
+- **Core Team card** (medium):
+  - G. Yohan Raju — Head of Marketing
+- **AI Research & Innovation Team** (grid of 3):
+  - B. Maha Lakshmi — AI Research and Development Intern
+  - S. Srisanth — AI Research and Innovation Intern
+  - Y. Chiranjeevi — AI Research and Innovation Intern
+- **Closing line**: "Our team combines strong technical expertise with fresh perspectives..."
 
-**2. HeroSection.tsx — Fix button layout on small screens**
-- Buttons already use `flex-col sm:flex-row`, which is fine. Ensure full width on mobile with `w-full sm:w-auto` on each button.
+Each person rendered as a card with an avatar fallback (initials), name, and role. Uses existing `useScrollReveal` for animations, existing theme colors, and border/card styles consistent with the rest of the site.
 
-**3. Differentiation.tsx — Fix cramped grid on mobile**
-- Change `grid-cols-2 lg:grid-cols-4` to `grid-cols-1 sm:grid-cols-2 lg:grid-cols-4` so cards stack vertically on very small screens.
+### Modified File: `src/pages/Index.tsx`
+Import `TeamSection` and place it between `<Philosophy />` and `<TaglineStrip />`.
 
-**4. Navbar.tsx — Minor mobile polish**
-- Already has hamburger menu. No major changes needed.
-
-**5. CTASection.tsx — Improve mobile layout**
-- The grid is `lg:grid-cols-2` which stacks on mobile — this is fine. Reduce padding on the contact card from `p-8` to `p-6 md:p-8`.
-
-**6. FeatureBlocks.tsx — Mobile card padding**
-- Reduce card padding from `p-10` to `p-6 md:p-10` for better fit on small screens.
-
-**7. Global mobile typography and spacing adjustments in index.css**
-- No changes needed — existing responsive classes handle it.
-
-### Files Modified
-- `src/components/HeroSection.tsx`
-- `src/components/Differentiation.tsx`
-- `src/components/FeatureBlocks.tsx`
-- `src/components/CTASection.tsx`
+### Files
+- **Create**: `src/components/TeamSection.tsx`
+- **Edit**: `src/pages/Index.tsx` (add import + component)
 
