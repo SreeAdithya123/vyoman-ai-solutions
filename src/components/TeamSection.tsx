@@ -1,34 +1,42 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+
+import adithyaImg from "@/assets/team/adithya.png";
+import yohanImg from "@/assets/team/yohan.png";
+import mahalakshmiImg from "@/assets/team/mahalakshmi.png";
+import chiranjeeviImg from "@/assets/team/chiranjeevi.png";
+import srisanthImg from "@/assets/team/srisanth.png";
 
 interface TeamMember {
   name: string;
   role: string;
   initials: string;
+  image: string;
 }
 
 const leadership: TeamMember[] = [
-  { name: "K. Sree Adithya", role: "Founder & CEO", initials: "KS" },
+  { name: "K. Sree Adithya", role: "Founder & CEO", initials: "KS", image: adithyaImg },
 ];
 
 const coreTeam: TeamMember[] = [
-  { name: "G. Yohan Raju", role: "Head of Marketing", initials: "GY" },
+  { name: "G. Yohan Raju", role: "Head of Marketing", initials: "GY", image: yohanImg },
 ];
 
 const researchTeam: TeamMember[] = [
-  { name: "B. Maha Lakshmi", role: "AI Research and Development Intern", initials: "BM" },
-  { name: "S. Srisanth", role: "AI Research and Innovation Intern", initials: "SS" },
-  { name: "Y. Chiranjeevi", role: "AI Research and Innovation Intern", initials: "YC" },
+  { name: "B. Maha Lakshmi", role: "AI Research and Development Intern", initials: "BM", image: mahalakshmiImg },
+  { name: "S. Srisanth", role: "AI Research and Innovation Intern", initials: "SS", image: srisanthImg },
+  { name: "Y. Chiranjeevi", role: "AI Research and Innovation Intern", initials: "YC", image: chiranjeeviImg },
 ];
 
-const MemberCard = ({ member, large }: { member: TeamMember; large?: boolean }) => (
-  <div className={`reveal flex flex-col items-center text-center border border-border rounded-2xl bg-card p-6 ${large ? "md:p-10" : "md:p-8"}`}>
-    <Avatar className={large ? "h-20 w-20 mb-4" : "h-14 w-14 mb-3"}>
+const MemberCard = ({ member }: { member: TeamMember }) => (
+  <div className="reveal flex flex-col items-center text-center border border-border rounded-2xl bg-card p-6 md:p-8">
+    <Avatar className="h-20 w-20 mb-4">
+      <AvatarImage src={member.image} alt={member.name} className="object-cover object-top" />
       <AvatarFallback className="bg-foreground text-background font-bold text-lg">
         {member.initials}
       </AvatarFallback>
     </Avatar>
-    <h3 className={`font-semibold tracking-tight ${large ? "text-xl md:text-2xl" : "text-lg"}`}>
+    <h3 className="font-semibold tracking-tight text-lg">
       {member.name}
     </h3>
     <p className="text-muted-foreground text-sm mt-1">{member.role}</p>
