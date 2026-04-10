@@ -30,7 +30,7 @@ const CTASection = () => {
           </div>
 
           {/* Right: Contact card */}
-          <div className="reveal reveal-delay-2 p-8 rounded-xl border border-border bg-card">
+          <div className="reveal reveal-delay-2 p-6 md:p-8 rounded-xl border border-border bg-card">
             <h3 className="text-lg font-semibold text-foreground mb-6">Let us understand your problem first</h3>
             <p className="text-sm text-muted-foreground mb-8 leading-relaxed">
               No sales pitch. No technical jargon.
