@@ -23,7 +23,7 @@ const coreTeam: TeamMember[] = [
 ];
 
 const researchTeam: TeamMember[] = [
-  { name: "B. Maha Lakshmi", role: "AI Research and Development Intern", initials: "BM", image: mahalakshmiImg },
+  { name: "B. Siri Maha Lakshmi", role: "AI Research and Development Intern", initials: "BSM", image: mahalakshmiImg },
   { name: "S. Srisanth", role: "AI Research and Innovation Intern", initials: "SS", image: srisanthImg },
   { name: "Y. Chiranjeevi", role: "AI Research and Innovation Intern", initials: "YC", image: chiranjeeviImg },
 ];
