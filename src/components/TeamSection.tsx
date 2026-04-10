@@ -30,7 +30,7 @@ const researchTeam: TeamMember[] = [
 
 const MemberCard = ({ member }: { member: TeamMember }) => (
   <div className="reveal flex flex-col items-center text-center border border-border rounded-2xl bg-card p-6 md:p-8">
-    <Avatar className="h-20 w-20 mb-4">
+    <Avatar className="h-28 w-28 mb-4">
       <AvatarImage src={member.image} alt={member.name} className="object-cover object-top" />
       <AvatarFallback className="bg-foreground text-background font-bold text-lg">
         {member.initials}
