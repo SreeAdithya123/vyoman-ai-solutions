@@ -16,6 +16,7 @@ const Navbar = () => {
     { label: "Use Cases", href: "#use-cases" },
     { label: "Services", href: "#use-cases" },
     { label: "Why Us", href: "#why-vyoman" },
+    { label: "Our Team", href: "#team" },
   ];
 
   return (
