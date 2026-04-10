@@ -32,14 +32,14 @@ const HeroSection = () => {
         }}
       />
 
-      <div ref={ref} className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-20">
+      <div ref={ref} className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-16">
         <p className="reveal flex items-center justify-center gap-2.5 text-[13px] font-medium tracking-wide text-muted-foreground mb-10">
           <span className="w-2 h-2 rounded-full bg-green-500 inline-block" />
           <span className="px-4 py-1.5 rounded-full border border-border">Built for teams that want results, not experiments</span>
         </p>
 
-        <h1 className="reveal reveal-delay-1 text-[clamp(2.5rem,6.5vw,5.5rem)] font-extrabold tracking-[-0.04em] leading-[0.95] mb-8">
-          <span className="hero-glow-text whitespace-nowrap">AI that actually works</span>
+        <h1 className="reveal reveal-delay-1 text-[clamp(2rem,8vw,5.5rem)] font-extrabold tracking-[-0.04em] leading-[0.95] mb-8">
+          <span className="hero-glow-text md:whitespace-nowrap">AI that actually works</span>
           <br />
           <span className="hero-glow-text-muted">for your business</span>
         </h1>
@@ -50,13 +50,13 @@ const HeroSection = () => {
         </p>
 
         <div className="reveal reveal-delay-3 flex flex-col sm:flex-row gap-4 justify-center mt-10">
-          <Button size="lg" className="rounded-full px-8 text-base gap-2" asChild>
+          <Button size="lg" className="w-full sm:w-auto rounded-full px-8 text-base gap-2" asChild>
             <a href="#contact">Start a conversation <ArrowRight className="w-4 h-4" /></a>
           </Button>
           <Button
             size="lg"
             variant="outline"
-            className="rounded-full px-8 text-base border-border hover:bg-secondary"
+            className="w-full sm:w-auto rounded-full px-8 text-base border-border hover:bg-secondary"
             asChild
           >
             <a href="#use-cases">See what we build</a>

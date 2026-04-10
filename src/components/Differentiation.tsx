@@ -22,7 +22,7 @@ const Differentiation = () => {
           <span className="block mt-2 text-foreground font-medium">We solve that.</span>
         </p>
 
-        <div className="reveal reveal-delay-2 grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="reveal reveal-delay-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {points.map((p, i) => (
             <div key={i} className="p-6 rounded-xl border border-border text-center">
               <span className="text-sm text-muted-foreground">{p}</span>

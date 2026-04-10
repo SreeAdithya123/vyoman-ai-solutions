@@ -34,7 +34,7 @@ const FeatureBlocks = () => {
           {features.map((f, i) => (
             <div
               key={i}
-              className={`reveal reveal-delay-${i + 1} p-10 rounded-xl border border-border bg-card glow-card`}
+              className={`reveal reveal-delay-${i + 1} p-6 md:p-10 rounded-xl border border-border bg-card glow-card`}
             >
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6">
                 <f.icon className="w-6 h-6 text-primary" />
