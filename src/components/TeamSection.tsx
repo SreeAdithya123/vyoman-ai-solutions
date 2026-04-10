@@ -1,11 +1,11 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-import adithyaImg from "@/assets/team/adithya.png";
-import yohanImg from "@/assets/team/yohan.png";
-import mahalakshmiImg from "@/assets/team/mahalakshmi.png";
-import chiranjeeviImg from "@/assets/team/chiranjeevi.png";
-import srisanthImg from "@/assets/team/srisanth.png";
+import adithyaImg from "@/assets/team/adithya-portrait.png";
+import yohanImg from "@/assets/team/yohan-portrait.png";
+import mahalakshmiImg from "@/assets/team/mahalakshmi-portrait.png";
+import chiranjeeviImg from "@/assets/team/chiranjeevi-portrait.png";
+import srisanthImg from "@/assets/team/srisanth-portrait.png";
 
 interface TeamMember {
   name: string;
@@ -30,8 +30,8 @@ const researchTeam: TeamMember[] = [
 
 const MemberCard = ({ member }: { member: TeamMember }) => (
   <div className="reveal flex flex-col items-center text-center border border-border rounded-2xl bg-card p-6 md:p-8">
-    <Avatar className="h-28 w-28 mb-4">
-      <AvatarImage src={member.image} alt={member.name} className="object-cover object-top" />
+    <Avatar className="h-28 w-28 mb-4 md:h-32 md:w-32">
+      <AvatarImage src={member.image} alt={member.name} className="h-full w-full object-cover object-center" />
       <AvatarFallback className="bg-foreground text-background font-bold text-lg">
         {member.initials}
       </AvatarFallback>
@@ -56,7 +56,6 @@ const TeamSection = () => {
           </p>
         </div>
 
-        {/* Leadership & Core Team */}
         <div className="mb-8">
           <p className="reveal text-xs uppercase tracking-widest text-muted-foreground mb-4 text-center">Leadership & Core Team</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
@@ -64,7 +63,6 @@ const TeamSection = () => {
           </div>
         </div>
 
-        {/* Research Team */}
         <div className="mb-12">
           <p className="reveal text-xs uppercase tracking-widest text-muted-foreground mb-4 text-center">AI Research & Innovation Team</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
