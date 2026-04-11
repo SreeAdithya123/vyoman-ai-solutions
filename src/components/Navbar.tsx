@@ -13,10 +13,10 @@ const Navbar = () => {
   }, []);
 
   const links = [
-    { label: "Product", href: "#product" },
-    { label: "Use Cases", href: "#use-cases" },
-    { label: "Services", href: "#use-cases" },
-    { label: "Why Us", href: "#why-vyoman" },
+    { label: "Product", href: "/#product" },
+    { label: "Use Cases", href: "/#use-cases" },
+    { label: "Services", href: "/#use-cases" },
+    { label: "Why Us", href: "/#why-vyoman" },
     { label: "Our Team", href: "/team", isRoute: true },
   ];
 

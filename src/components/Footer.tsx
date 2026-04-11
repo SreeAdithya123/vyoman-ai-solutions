@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
 const footerLinks = [
-  { label: "Product", href: "#product" },
-  { label: "Use Cases", href: "#use-cases" },
-  { label: "Services", href: "#use-cases" },
-  { label: "Why Us", href: "#why-vyoman" },
+  { label: "Product", href: "/#product" },
+  { label: "Use Cases", href: "/#use-cases" },
+  { label: "Services", href: "/#use-cases" },
+  { label: "Why Us", href: "/#why-vyoman" },
   { label: "Our Team", href: "/team", isRoute: true },
-  { label: "Contact Us", href: "#contact" },
+  { label: "Contact Us", href: "/#contact" },
 ];
 
 const Footer = () => {
