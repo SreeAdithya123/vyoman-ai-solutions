@@ -38,14 +38,14 @@ const CTASection = () => {
             </p>
 
             <div className="space-y-4">
-              <div className="flex items-center gap-3 text-sm text-muted-foreground">
+              <a href="mailto:sreeadithya.ndd@gmail.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors">
                 <Mail className="w-4 h-4 text-primary shrink-0" />
                 <span>sreeadithya.ndd@gmail.com</span>
-              </div>
-              <div className="flex items-center gap-3 text-sm text-muted-foreground">
+              </a>
+              <a href="https://wa.me/917013271894" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors">
                 <Phone className="w-4 h-4 text-primary shrink-0" />
                 <span>+91 70132 71894</span>
-              </div>
+              </a>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4 text-primary shrink-0" />
                 <span>West Godavari, Andhra Pradesh, India</span>
