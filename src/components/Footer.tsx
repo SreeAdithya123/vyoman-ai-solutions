@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 const footerLinks = [
   { label: "Product", href: "#product" },
   { label: "Use Cases", href: "#use-cases" },
   { label: "Services", href: "#use-cases" },
   { label: "Why Us", href: "#why-vyoman" },
-  { label: "Our Team", href: "#team" },
+  { label: "Our Team", href: "/team", isRoute: true },
   { label: "Contact Us", href: "#contact" },
 ];
 
@@ -27,15 +29,25 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2">
-            {footerLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
-              >
-                {link.label}
-              </a>
-            ))}
+            {footerLinks.map((link) =>
+              link.isRoute ? (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
+                >
+                  {link.label}
+                </a>
+              )
+            )}
           </div>
         </div>
 

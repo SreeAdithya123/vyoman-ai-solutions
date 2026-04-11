@@ -6,7 +6,7 @@ import UseCases from "@/components/UseCases";
 import Differentiation from "@/components/Differentiation";
 import WhyVyoman from "@/components/WhyVyoman";
 import Philosophy from "@/components/Philosophy";
-import TeamSection from "@/components/TeamSection";
+
 import TaglineStrip from "@/components/TaglineStrip";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -22,7 +22,7 @@ const Index = () => {
       <Differentiation />
       <WhyVyoman />
       <Philosophy />
-      <TeamSection />
+      
       <TaglineStrip />
       <CTASection />
       <Footer />

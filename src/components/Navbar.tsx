@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -16,7 +17,7 @@ const Navbar = () => {
     { label: "Use Cases", href: "#use-cases" },
     { label: "Services", href: "#use-cases" },
     { label: "Why Us", href: "#why-vyoman" },
-    { label: "Our Team", href: "#team" },
+    { label: "Our Team", href: "/team", isRoute: true },
   ];
 
   return (
@@ -37,15 +38,25 @@ const Navbar = () => {
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
-          {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
-            >
-              {link.label}
-            </a>
-          ))}
+          {links.map((link) =>
+            link.isRoute ? (
+              <Link
+                key={link.label}
+                to={link.href}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
+              >
+                {link.label}
+              </a>
+            )
+          )}
           <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
             Log in
           </a>
@@ -69,16 +80,27 @@ const Navbar = () => {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border px-6 py-4 animate-fade-in">
-          {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="block py-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
-              onClick={() => setMobileOpen(false)}
-            >
-              {link.label}
-            </a>
-          ))}
+          {links.map((link) =>
+            link.isRoute ? (
+              <Link
+                key={link.label}
+                to={link.href}
+                className="block py-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                onClick={() => setMobileOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.label}
+                href={link.href}
+                className="block py-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                onClick={() => setMobileOpen(false)}
+              >
+                {link.label}
+              </a>
+            )
+          )}
           <a href="#contact" className="block py-3 text-sm text-muted-foreground hover:text-foreground" onClick={() => setMobileOpen(false)}>Log in</a>
           <Button size="sm" variant="outline" className="rounded-full px-5 mt-3 w-full border-border" asChild>
             <a href="#contact" onClick={() => setMobileOpen(false)}>Contact Us</a>
