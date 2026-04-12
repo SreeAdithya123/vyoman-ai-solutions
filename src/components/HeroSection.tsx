@@ -64,11 +64,10 @@ const HeroSection = () => {
         </div>
 
         <div className="reveal reveal-delay-4 mt-20">
-          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
-            <span className="flex items-center gap-1.5"><span className="text-primary">✓</span> Government-Registered MSME</span>
-            <span className="flex items-center gap-1.5"><span className="text-primary">✓</span> Nidadavole, Andhra Pradesh</span>
-            <span className="flex items-center gap-1.5"><span className="text-primary">✓</span> UDYAM: AP-12-0115093</span>
-            <span className="flex items-center gap-1.5"><span className="text-primary">✓</span> Built for Indian Businesses</span>
+          <div className="flex flex-col items-center justify-center gap-y-6 text-sm text-muted-foreground text-center">
+            <span className="flex flex-col items-center gap-1"><span className="text-primary">✓</span> Government-Registered MSME</span>
+            <span className="flex flex-col items-center gap-1"><span className="text-primary">✓</span> Nidadavole, Andhra Pradesh</span>
+            <span className="flex flex-col items-center gap-1 mt-6"><span className="text-primary">✓</span> Built for Indian Businesses</span>
           </div>
         </div>
       </div>
