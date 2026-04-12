@@ -1,26 +1,43 @@
 
 
-## Plan: Team Page + Clickable Contact Links
+## Rewrite All Sections to Match New Copywriting
 
-### 1. Move Team Section to a Separate Page
+This is a comprehensive content overhaul across most page components. The site structure will be reorganized to match the new copy's sections.
 
-- **Create `src/pages/Team.tsx`** — new page rendering `Navbar`, `TeamSection`, and `Footer`
-- **Update `src/App.tsx`** — add route `<Route path="/team" element={<Team />} />`
-- **Update `src/pages/Index.tsx`** — remove `TeamSection` import and usage
-- **Update `src/components/Navbar.tsx`** — change "Our Team" from `href="#team"` to a React Router `Link` to `/team`
-- **Update `src/components/Footer.tsx`** — same change for "Our Team" link
+### New Section Mapping
 
-### 2. Make Contact Details Clickable
-
-In **`src/components/CTASection.tsx`**:
-- **Email**: Wrap in `<a href="mailto:sreeadithya.ndd@gmail.com">` so clicking opens the user's email client with a compose window
-- **Phone**: Wrap in `<a href="https://wa.me/917013271894">` so clicking opens WhatsApp chat ready to send a message
+| New Copy Section | Component | Action |
+|---|---|---|
+| Hero | `HeroSection.tsx` | Rewrite content |
+| Who We Are | `ProductPitch.tsx` | Rewrite content |
+| What We Do | `FeatureBlocks.tsx` | Replace 4 cards with bullet list format |
+| What We Offer | `UseCases.tsx` | Replace with 3 offerings (Discovery Call, Product Build, AI MasterClass) |
+| Why Vyoman | `WhyVyoman.tsx` | Replace with 3 FAQ-style objection handlers |
+| Final CTA | `CTASection.tsx` | Rewrite content |
+| TaglineStrip | `TaglineStrip.tsx` | Remove (no equivalent in new copy) |
+| Differentiation | `Differentiation.tsx` | Remove (merged into Why Vyoman) |
+| Philosophy | `Philosophy.tsx` | Remove (no equivalent) |
 
 ### Files Modified
-- `src/pages/Team.tsx` (new)
-- `src/App.tsx`
-- `src/pages/Index.tsx`
-- `src/components/Navbar.tsx`
-- `src/components/Footer.tsx`
-- `src/components/CTASection.tsx`
+
+1. **`src/components/HeroSection.tsx`** — New headline ("Your Business Doesn't Need Another Tech Demo"), new subtext, new trust badges (Government-Registered MSME, Nidadavole AP, UDYAM, Built for Indian Businesses), update CTA buttons to "Book a Free Strategy Call" and "See What We Build"
+
+2. **`src/components/ProductPitch.tsx`** — Rename to "Who We Are" section with new content about being a lean product/SaaS partner, trust points as bullet list
+
+3. **`src/components/FeatureBlocks.tsx`** — Rename to "What We Do" with heading "We turn your business problems into growth engines" and 4 bullet points about product/SaaS development
+
+4. **`src/components/UseCases.tsx`** — Replace with "What We Offer" — 3 numbered offerings (Discovery Call, Product & SaaS Build, AI MasterClass) as styled cards
+
+5. **`src/components/WhyVyoman.tsx`** — Replace with 3 objection-handling blocks ("We already have some tools", "Is this only for big companies?", "What if I'm not technical?")
+
+6. **`src/components/CTASection.tsx`** — New headline "Ready to solve your business problems and grow faster?", updated CTA button, footer note about MSME registration
+
+7. **`src/pages/Index.tsx`** — Remove `TaglineStrip`, `Differentiation`, `Philosophy` imports and usage
+
+8. **`src/components/Navbar.tsx`** — Update nav links to match new sections: "Who We Are" (#product), "What We Do" (#features), "What We Offer" (#use-cases), "Why Vyoman" (#why-vyoman), "Our Team" (/team). Remove "Log in" link. Keep "Contact Us" button.
+
+9. **`src/components/Footer.tsx`** — Update footer links to match new nav, add "Government-registered MSME · Nidadavole, Andhra Pradesh · No spam, ever." text
+
+### Files Deleted (imports removed)
+- `TaglineStrip.tsx`, `Differentiation.tsx`, `Philosophy.tsx` — content removed from page; files can remain but won't be imported
 
