@@ -13,10 +13,10 @@ const Navbar = () => {
   }, []);
 
   const links = [
-    { label: "Product", href: "/#product" },
-    { label: "Use Cases", href: "/#use-cases" },
-    { label: "Services", href: "/#use-cases" },
-    { label: "Why Us", href: "/#why-vyoman" },
+    { label: "Who We Are", href: "/#product" },
+    { label: "What We Do", href: "/#features" },
+    { label: "What We Offer", href: "/#use-cases" },
+    { label: "Why Vyoman", href: "/#why-vyoman" },
     { label: "Our Team", href: "/team", isRoute: true },
   ];
 
@@ -29,14 +29,13 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2.5 text-foreground">
+        <a href="/" className="flex items-center gap-2.5 text-foreground">
           <div className="w-7 h-7 rounded-md bg-foreground flex items-center justify-center text-sm font-bold text-background">
             V
           </div>
           <span className="text-base font-semibold tracking-tight">Vyoman AI Solutions</span>
         </a>
 
-        {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) =>
             link.isRoute ? (
@@ -57,15 +56,11 @@ const Navbar = () => {
               </a>
             )
           )}
-          <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
-            Log in
-          </a>
           <Button size="sm" variant="outline" className="rounded-full px-5 border-border" asChild>
-            <a href="#contact">Contact Us</a>
+            <a href="/#contact">Contact Us</a>
           </Button>
         </div>
 
-        {/* Mobile hamburger */}
         <button
           className="md:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -77,7 +72,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border px-6 py-4 animate-fade-in">
           {links.map((link) =>
@@ -101,9 +95,8 @@ const Navbar = () => {
               </a>
             )
           )}
-          <a href="#contact" className="block py-3 text-sm text-muted-foreground hover:text-foreground" onClick={() => setMobileOpen(false)}>Log in</a>
           <Button size="sm" variant="outline" className="rounded-full px-5 mt-3 w-full border-border" asChild>
-            <a href="#contact" onClick={() => setMobileOpen(false)}>Contact Us</a>
+            <a href="/#contact" onClick={() => setMobileOpen(false)}>Contact Us</a>
           </Button>
         </div>
       )}

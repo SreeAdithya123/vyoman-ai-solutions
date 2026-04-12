@@ -1,11 +1,18 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-const reasons = [
-  { num: "01", title: "Built for outcomes", desc: "Every system is designed to deliver measurable results" },
-  { num: "02", title: "Direct collaboration", desc: "You work with the people building your system" },
-  { num: "03", title: "Fast execution", desc: "From idea to deployment without unnecessary delays" },
-  { num: "04", title: "Cost efficient", desc: "High impact systems without enterprise level pricing" },
-  { num: "05", title: "Credible and structured", desc: "MSME registered with real accountability" },
+const objections = [
+  {
+    question: '"We already have some tools"',
+    answer: "We don't replace what works. We build smart products and SaaS on top of your existing setup so everything becomes more powerful and growth-focused.",
+  },
+  {
+    question: '"Is this only for big companies?"',
+    answer: "No. We specialize in Indian SMBs and growing businesses — exactly where smart products and SaaS deliver the fastest growth and biggest returns.",
+  },
+  {
+    question: '"What if I\'m not technical?"',
+    answer: "Perfect. You don't need to be. Just bring your business problems. We handle the tech and show you how it grows your revenue, saves time, and simplifies operations.",
+  },
 ];
 
 const WhyVyoman = () => {
@@ -13,20 +20,19 @@ const WhyVyoman = () => {
 
   return (
     <section id="why-vyoman" className="py-24 md:py-32 px-6 bg-secondary/30">
-      <div ref={ref} className="max-w-6xl mx-auto text-center">
-        <h2 className="reveal text-3xl md:text-5xl font-bold tracking-tight text-foreground mb-16">
-          Why teams choose Vyoman
+      <div ref={ref} className="max-w-4xl mx-auto">
+        <h2 className="reveal text-3xl md:text-5xl font-bold tracking-tight text-foreground mb-16 text-center">
+          Still wondering if we're the right fit?
         </h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12">
-          {reasons.map((r, i) => (
+        <div className="space-y-6">
+          {objections.map((o, i) => (
             <div
               key={i}
-              className={`reveal reveal-delay-${Math.min(i + 1, 4)} text-left ${i >= 3 ? "lg:col-start-auto" : ""}`}
+              className={`reveal reveal-delay-${Math.min(i + 1, 4)} p-6 md:p-8 rounded-xl border border-border bg-card`}
             >
-              <span className="text-xs font-mono text-primary mb-3 block">{r.num}</span>
-              <h3 className="text-lg font-semibold text-foreground mb-2">{r.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{r.desc}</p>
+              <h3 className="text-lg font-semibold text-primary mb-3">{o.question}</h3>
+              <p className="text-muted-foreground leading-relaxed">{o.answer}</p>
             </div>
           ))}
         </div>

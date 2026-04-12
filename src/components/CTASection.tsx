@@ -7,59 +7,39 @@ const CTASection = () => {
 
   return (
     <section id="contact" className="py-24 md:py-32 px-6">
-      <div ref={ref} className="max-w-6xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Left: CTA */}
-          <div>
-            <h2 className="reveal text-3xl md:text-5xl font-bold tracking-tight text-gradient mb-6">
-              Start building something<br />that actually works
-            </h2>
-            <p className="reveal reveal-delay-1 text-lg text-muted-foreground mb-10">
-              Tell us what you are trying to solve. We will help you turn it into a working system.
-            </p>
-            <div className="reveal reveal-delay-2 flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="rounded-full px-8 text-base gap-2" asChild>
-                <a href="mailto:sreeadithya.ndd@gmail.com">
-                  Talk to us <ArrowRight className="w-4 h-4" />
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" className="rounded-full px-8 text-base border-border" asChild>
-                <a href="mailto:sreeadithya.ndd@gmail.com">Get started</a>
-              </Button>
-            </div>
-          </div>
-
-          {/* Right: Contact card */}
-          <div className="reveal reveal-delay-2 p-6 md:p-8 rounded-xl border border-border bg-card">
-            <h3 className="text-lg font-semibold text-foreground mb-6">Let us understand your problem first</h3>
-            <p className="text-sm text-muted-foreground mb-8 leading-relaxed">
-              No sales pitch. No technical jargon.
-              Just a clear discussion about your business and how AI can help.
-            </p>
-
-            <div className="space-y-4">
-              <a href="mailto:sreeadithya.ndd@gmail.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors">
-                <Mail className="w-4 h-4 text-primary shrink-0" />
-                <span>sreeadithya.ndd@gmail.com</span>
-              </a>
-              <a href="https://wa.me/917013271894" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors">
-                <Phone className="w-4 h-4 text-primary shrink-0" />
-                <span>+91 70132 71894</span>
-              </a>
-              <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                <MapPin className="w-4 h-4 text-primary shrink-0" />
-                <span>West Godavari, Andhra Pradesh, India</span>
-              </div>
-            </div>
-
-            <div className="mt-6 pt-6 border-t border-border">
-              <p className="text-xs text-muted-foreground">
-                Vyoman AI Solutions<br />
-                UDYAM-AP-12-0115093
-              </p>
-            </div>
-          </div>
+      <div ref={ref} className="max-w-4xl mx-auto text-center">
+        <h2 className="reveal text-3xl md:text-5xl font-bold tracking-tight text-gradient mb-6">
+          Ready to solve your business<br />problems and grow faster?
+        </h2>
+        <p className="reveal reveal-delay-1 text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
+          We build the products and SaaS you actually need — and teach you how to keep growing every month through our AI MasterClass.
+        </p>
+        <div className="reveal reveal-delay-2">
+          <Button size="lg" className="rounded-full px-10 text-base gap-2" asChild>
+            <a href="mailto:sreeadithya.ndd@gmail.com">
+              Book Your Free Strategy Call <ArrowRight className="w-4 h-4" />
+            </a>
+          </Button>
         </div>
+
+        <div className="reveal reveal-delay-3 mt-12 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
+          <a href="mailto:sreeadithya.ndd@gmail.com" className="flex items-center gap-2 hover:text-foreground transition-colors">
+            <Mail className="w-4 h-4 text-primary" />
+            sreeadithya.ndd@gmail.com
+          </a>
+          <a href="https://wa.me/917013271894" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-foreground transition-colors">
+            <Phone className="w-4 h-4 text-primary" />
+            +91 70132 71894
+          </a>
+          <span className="flex items-center gap-2">
+            <MapPin className="w-4 h-4 text-primary" />
+            Nidadavole, Andhra Pradesh
+          </span>
+        </div>
+
+        <p className="reveal reveal-delay-4 mt-8 text-xs text-muted-foreground">
+          Government-registered MSME · Nidadavole, Andhra Pradesh · No spam, ever.
+        </p>
       </div>
     </section>
   );

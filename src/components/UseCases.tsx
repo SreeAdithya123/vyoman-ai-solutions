@@ -1,20 +1,27 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
-const cases = [
-  "Automate repetitive operations and reduce manual work",
-  "Predict trends, demand, and outcomes using your data",
-  "Build internal tools that your team actually uses",
-  "Create intelligent products for your customers",
-  "Improve learning, training, and performance systems",
-];
-
-const services = [
-  "Custom AI systems built for your business",
-  "SaaS platforms designed around your workflow",
-  "AI powered tools and internal products",
-  "Consulting, integration, and deployment",
-  "Adaptive e-learning platforms",
+const offerings = [
+  {
+    num: "01",
+    title: "Discovery Call",
+    price: "Free | 30 Minutes | No Commitment",
+    desc: "Tell us your biggest business challenge. We'll show you exactly how product development and SaaS can solve it and drive growth. You walk away with clear next steps.",
+    cta: { label: "Book Your Free Strategy Call", href: "#contact" },
+  },
+  {
+    num: "02",
+    title: "Product & SaaS Build",
+    price: "Custom Scoped | Fixed Price | Defined Timeline",
+    desc: "We design, develop, and deliver a complete custom product or SaaS platform built specifically for your business needs. From idea to launch — on time and on budget.",
+  },
+  {
+    num: "03",
+    title: "AI MasterClass + Growth Partnership",
+    price: "Monthly AI MasterClass | Ongoing Support",
+    desc: "Join our AI MasterClass every month and get hands-on learning plus continued product and SaaS development support. Think of us as your embedded growth partner.",
+  },
 ];
 
 const UseCases = () => {
@@ -23,46 +30,30 @@ const UseCases = () => {
   return (
     <section id="use-cases" className="py-24 md:py-32 px-6">
       <div ref={ref} className="max-w-6xl mx-auto">
-        <h2 className="reveal text-3xl md:text-5xl font-bold tracking-tight text-gradient mb-16">
-          AI applied where it<br />actually matters
+        <h2 className="reveal text-3xl md:text-5xl font-bold tracking-tight text-gradient mb-4">
+          Choose where to begin.<br />Grow as you need.
         </h2>
+        <p className="reveal reveal-delay-1 text-lg text-muted-foreground mb-16">
+          Every engagement is clear, transparent, and focused on your business growth. You own everything we build.
+        </p>
 
-        <div className="grid lg:grid-cols-2 gap-16">
-          {/* Use Cases */}
-          <div>
-            <h3 className="reveal text-xs font-semibold tracking-[0.2em] uppercase text-muted-foreground mb-6">
-              Use Cases
-            </h3>
-            <div className="space-y-3">
-              {cases.map((c, i) => (
-                <div
-                  key={i}
-                  className={`reveal reveal-delay-${Math.min(i + 1, 4)} group flex items-center gap-3 p-4 rounded-lg border border-border hover:border-primary/30 transition-all duration-300 cursor-default`}
-                >
-                  <ChevronRight className="w-4 h-4 text-primary shrink-0 group-hover:translate-x-0.5 transition-transform duration-300" />
-                  <span className="text-foreground text-sm">{c}</span>
-                </div>
-              ))}
+        <div className="grid md:grid-cols-3 gap-6">
+          {offerings.map((o, i) => (
+            <div
+              key={i}
+              className={`reveal reveal-delay-${Math.min(i + 1, 4)} p-6 md:p-8 rounded-xl border border-border bg-card glow-card flex flex-col`}
+            >
+              <span className="text-xs font-mono text-primary mb-4">{o.num}</span>
+              <h3 className="text-xl font-semibold text-foreground mb-2">{o.title}</h3>
+              <p className="text-xs font-medium text-primary/80 mb-4">{o.price}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed flex-1">{o.desc}</p>
+              {o.cta && (
+                <Button size="sm" className="rounded-full mt-6 gap-2 w-fit" asChild>
+                  <a href={o.cta.href}>{o.cta.label} <ArrowRight className="w-3.5 h-3.5" /></a>
+                </Button>
+              )}
             </div>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="reveal text-xs font-semibold tracking-[0.2em] uppercase text-muted-foreground mb-6">
-              Services
-            </h3>
-            <div className="space-y-3">
-              {services.map((s, i) => (
-                <div
-                  key={i}
-                  className={`reveal reveal-delay-${Math.min(i + 1, 4)} flex items-center gap-3 p-4 rounded-lg border border-border hover:border-primary/30 transition-all duration-300 cursor-default`}
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                  <span className="text-foreground text-sm">{s}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
