@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
 const footerLinks = [
-  { label: "Product", href: "/#product" },
-  { label: "Use Cases", href: "/#use-cases" },
-  { label: "Services", href: "/#use-cases" },
-  { label: "Why Us", href: "/#why-vyoman" },
+  { label: "Who We Are", href: "/#product" },
+  { label: "What We Do", href: "/#features" },
+  { label: "What We Offer", href: "/#use-cases" },
+  { label: "Why Vyoman", href: "/#why-vyoman" },
   { label: "Our Team", href: "/team", isRoute: true },
   { label: "Contact Us", href: "/#contact" },
 ];
@@ -13,7 +13,6 @@ const Footer = () => {
   return (
     <footer className="py-12 px-6 border-t border-border">
       <div className="max-w-6xl mx-auto">
-        {/* Row 1: Logo + Nav Links */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
             <div className="flex items-center gap-2.5">
@@ -51,13 +50,16 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Row 2: Separator */}
         <div className="border-t border-border my-8" />
 
-        {/* Row 3: Copyright */}
-        <p className="text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Vyoman AI Solutions. All rights reserved.
-        </p>
+        <div className="text-center">
+          <p className="text-xs text-muted-foreground">
+            Government-registered MSME · Nidadavole, Andhra Pradesh · No spam, ever.
+          </p>
+          <p className="text-xs text-muted-foreground mt-2">
+            © {new Date().getFullYear()} Vyoman AI Solutions. All rights reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );
