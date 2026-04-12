@@ -1,11 +1,32 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { ChevronRight } from "lucide-react";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 
 const features = [
-  "We build custom products and SaaS platforms tailored exactly to how your business runs",
-  "We solve real operational problems using smart, practical technology",
-  "We create tools that save time, reduce costs, and open new revenue opportunities",
-  "We help you scale faster with solutions that grow with your business",
+  {
+    title: "We build custom products and SaaS platforms tailored exactly to how your business runs",
+    description:
+      "Whether it's an internal dashboard, a customer-facing app, or a full SaaS product — we design and build it from scratch to fit your exact workflows, team size, and growth goals.",
+  },
+  {
+    title: "We solve real operational problems using smart, practical technology",
+    description:
+      "From automating repetitive tasks to streamlining complex processes, we use AI and modern tech to eliminate bottlenecks and make your operations run smoother.",
+  },
+  {
+    title: "We create tools that save time, reduce costs, and open new revenue opportunities",
+    description:
+      "Our tools are built to deliver real ROI — helping your team work faster, cut unnecessary expenses, and discover new ways to generate revenue.",
+  },
+  {
+    title: "We help you scale faster with solutions that grow with your business",
+    description:
+      "Every solution we build is designed to handle growth. As your business expands, your tools expand with it — no rebuilds, no migrations, no headaches.",
+  },
 ];
 
 const FeatureBlocks = () => {
@@ -21,17 +42,22 @@ const FeatureBlocks = () => {
           We do <strong className="text-foreground">product development and SaaS</strong> that solve your biggest challenges and help your business grow.
         </p>
 
-        <div className="space-y-3">
+        <Accordion type="single" collapsible className="space-y-3">
           {features.map((f, i) => (
-            <div
+            <AccordionItem
               key={i}
-              className={`reveal reveal-delay-${Math.min(i + 1, 4)} group flex items-center gap-4 p-5 rounded-xl border border-border bg-card hover:border-primary/30 transition-all duration-300`}
+              value={`item-${i}`}
+              className={`reveal reveal-delay-${Math.min(i + 1, 4)} rounded-xl border border-border bg-card hover:border-primary/30 transition-all duration-300 px-5`}
             >
-              <ChevronRight className="w-5 h-5 text-primary shrink-0 group-hover:translate-x-0.5 transition-transform duration-300" />
-              <span className="text-foreground">{f}</span>
-            </div>
+              <AccordionTrigger className="text-foreground text-left hover:no-underline">
+                {f.title}
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                {f.description}
+              </AccordionContent>
+            </AccordionItem>
           ))}
-        </div>
+        </Accordion>
 
         <p className="reveal reveal-delay-4 text-sm text-muted-foreground mt-8 text-center">
           Every project is designed to deliver measurable growth — not just features.
