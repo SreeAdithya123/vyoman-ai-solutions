@@ -46,7 +46,7 @@ const HeroSection = () => {
 
         <p className="reveal reveal-delay-2 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-4 leading-relaxed">
           <strong className="text-foreground">Vyoman AI Solutions</strong> builds custom products and SaaS platforms for Indian businesses.
-          We solve your real problems, create tools your team loves, and help you grow — faster and smarter.
+          We solve your real problems, create tools your team loves, and help you grow, faster and smarter.
         </p>
 
         <div className="reveal reveal-delay-3 flex flex-col sm:flex-row gap-4 justify-center mt-10">
