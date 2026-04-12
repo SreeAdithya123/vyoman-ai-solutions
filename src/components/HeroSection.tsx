@@ -36,12 +36,12 @@ const HeroSection = () => {
           <span className="px-4 py-1.5 rounded-full border border-border">Small enough to care. Skilled enough to deliver.</span>
         </p>
 
-        <h1 className="reveal reveal-delay-1 text-[clamp(2rem,8vw,5.5rem)] font-extrabold tracking-[-0.04em] leading-[0.95] mb-8">
-          <span className="hero-glow-text">Your Business Doesn't</span>
+        <h1 className="reveal reveal-delay-1 text-[clamp(1.8rem,6vw,4rem)] font-extrabold tracking-[-0.04em] leading-[0.95] mb-8">
+          <span className="hero-glow-text">Your Business Doesn't Need</span>
           <br />
-          <span className="hero-glow-text">Need Another Tech Demo.</span>
+          <span className="hero-glow-text">Another Tech Demo.</span>
           <br />
-          <span className="hero-glow-text-muted text-[clamp(1.5rem,5vw,3.5rem)]">It Needs Products That Actually Grow Your Business.</span>
+          <span className="hero-glow-text-muted text-[clamp(1.3rem,4vw,2.8rem)]">It Needs Products That Actually Grow Your Business.</span>
         </h1>
 
         <p className="reveal reveal-delay-2 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-4 leading-relaxed">
