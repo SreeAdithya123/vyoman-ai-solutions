@@ -67,7 +67,6 @@ const HeroSection = () => {
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
             <span className="flex items-center gap-1.5"><span className="text-primary">✓</span> Government-Registered MSME</span>
             <span className="flex items-center gap-1.5"><span className="text-primary">✓</span> Nidadavole, Andhra Pradesh</span>
-            <span className="flex items-center gap-1.5"><span className="text-primary">✓</span> UDYAM: AP-12-0115093</span>
             <span className="flex items-center gap-1.5"><span className="text-primary">✓</span> Built for Indian Businesses</span>
           </div>
         </div>
