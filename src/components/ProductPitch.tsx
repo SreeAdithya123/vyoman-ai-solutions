@@ -14,7 +14,7 @@ const ProductPitch = () => {
     <section id="product" className="py-24 md:py-32 px-6">
       <div ref={ref} className="max-w-4xl mx-auto">
         <h2 className="reveal text-3xl md:text-5xl font-bold tracking-tight mb-4">
-          <span className="text-foreground">We're Vyoman AI Solutions —</span>
+          <span className="text-foreground">We're Vyoman AI Solutions </span>
           <br />
           <span className="text-gradient">your lean product and SaaS partner in India.</span>
         </h2>
