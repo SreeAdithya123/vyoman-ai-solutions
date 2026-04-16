@@ -115,6 +115,24 @@
     transform: translateY(-2px);
   }
 
+  /* LMS Theme */
+  .lms-theme {
+    --lms-bg: 215 51% 11%;
+    --lms-bg-card: 215 44% 14%;
+    --lms-bg-sidebar: 215 55% 8%;
+    --lms-primary: 197 100% 51%;
+    --lms-primary-foreground: 215 51% 11%;
+    --lms-accent: 45 100% 53%;
+    --lms-accent-foreground: 215 51% 11%;
+    --lms-text: 0 0% 100%;
+    --lms-text-muted: 215 20% 80%;
+    --lms-text-dim: 215 15% 55%;
+    --lms-border: 215 30% 20%;
+    --lms-success: 142 71% 45%;
+    --lms-error: 0 84% 60%;
+    --lms-navy: 215 65% 15%;
+  }
+
   .hero-glow-text {
     color: hsl(0 0% 95%);
     text-shadow: 0 0 60px hsl(0 0% 100% / 0.25), 0 0 120px hsl(0 0% 100% / 0.1);
