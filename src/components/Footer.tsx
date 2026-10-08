@@ -57,7 +57,7 @@ const Footer = () => {
             Government-registered MSME · Nidadavole, Andhra Pradesh · No spam, ever.
           </p>
           <p className="text-xs text-muted-foreground mt-2">
-            © {new Date().getFullYear()} Vyoman AI Solutions. All rights reserved.
+            © 2025 Vyoman AI Solutions. All rights reserved.
           </p>
         </div>
       </div>
