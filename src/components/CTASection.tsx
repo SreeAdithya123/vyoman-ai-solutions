@@ -16,16 +16,16 @@ const CTASection = () => {
         </p>
         <div className="reveal reveal-delay-2">
           <Button size="lg" className="rounded-full px-10 text-base gap-2" asChild>
-            <a href="mailto:sreeadithya.ndd@gmail.com">
+            <a href="mailto:sreeadithya@vyoman.tech">
               Book Your Free Strategy Call <ArrowRight className="w-4 h-4" />
             </a>
           </Button>
         </div>
 
         <div className="reveal reveal-delay-3 mt-12 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
-          <a href="mailto:sreeadithya.ndd@gmail.com" className="flex items-center gap-2 hover:text-foreground transition-colors">
+          <a href="mailto:sreeadithya@vyoman.tech" className="flex items-center gap-2 hover:text-foreground transition-colors">
             <Mail className="w-4 h-4 text-primary" />
-            sreeadithya.ndd@gmail.com
+            sreeadithya@vyoman.tech
           </a>
           <a href="https://wa.me/917013271894" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-foreground transition-colors">
             <Phone className="w-4 h-4 text-primary" />
